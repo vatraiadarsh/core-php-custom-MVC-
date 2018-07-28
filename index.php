@@ -4,12 +4,10 @@ spl_autoload_register(function($className){
 });
 
 
-include_once('app/helpers/ViewHelper.php');
-include_once('app/helpers/UrlHelper.php');
+include_once('./helpers/ViewHelper.php');
+include_once('./helpers/UrlHelper.php');
 
-$routes=[''=>'app\controllers\HomeController',
-        'home'=>'app\controllers\HomeController',
-        'products'=>'app\controllers\productController'];
+include_once('./routes/web.php');
 
 $path=$_SERVER['REQUEST_URI'];
 $params=explode("/",$path);
@@ -29,5 +27,5 @@ if(array_key_exists($params[1],$routes)){
     }   
     
 }else{
-    echo"<h1>404 page not found</h1>";
+    include_once('./views/errors/404.php');
 }

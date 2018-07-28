@@ -4,7 +4,20 @@ namespace app\controllers;
 class ProductController{
 
     public function index(){
-        echo "<h1>Product Page</h1>";
+        $data=[
+            'page'=>'product/index'
+        ];
+        view('master',$data);
     }
 
+    public function allproduct(){
+        $data=[
+            'page'=>'product/allproduct'
+        ];
+        view('master',$data);
+    }
+
+    
+
 }
+

@@ -17,7 +17,7 @@ class HomeController{
             'courses'=>$this->courseRepo->getAll(),
             'page'=>'home/index'
         ];
-        view('master_layout',$data);
+        view('master',$data);
     }
 
     public function about(){
@@ -26,15 +26,21 @@ class HomeController{
         ];
 
          
-        view('master_layout',$data);
+        view('master',$data);
     }
 
     public function contact(){
-       echo"<h1>Contact Page</h1>";
+        $data=[
+            'page'=>'home/contact'
+        ];
+
+         
+        view('master',$data);
     }
 
     public function services(){
         echo"<h1>Service Page</h1>";
     }
+
 
 }
