@@ -11,6 +11,5 @@
 $routes=[''=>'app\controllers\HomeController',
         'home'=>'app\controllers\HomeController',
         'products'=>'app\controllers\productController',
-        'errors'=>'app\controllers\ErrorController',
         
     ];

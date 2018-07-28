@@ -1,0 +1,8 @@
+{
+  "name": "custom_mvc",
+  "version": "1.0",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}
